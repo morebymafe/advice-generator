@@ -17,30 +17,33 @@
 </head>
 <body>
 
-  Advice #<!-- Advice ID goes here -->
+  <!-- Advice # Advice ID goes here -->
+  <div id="container">Advice</div>
 
-  "<!-- Advice text goes here -->"
+  <!-- Advice text goes here -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
 
-  <p id="advice"></p>
+  <p id="text">Hello</p>
+  <h1>Authors</h1>
+  <ul id="authors"></ul>  
 
   <script>
-    fetch('https://api.adviceslip.com/advice', {
-      method:'GET',
-      body: JSON.stringify({
-        payLoadKey: 'slip'
-      })
-    })
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error(error));
 
-      var advice = document.getElementById('advice');
+    let advice = document.getElementById('text');
 
-</script>
+    async function api(url) {
+      let apiRequest = await fetch();
+      let result = await apiRequest;
+      advice.innerText = result;
+    } 
+
+    api('https://api.adviceslip.com/advice');
+
+  </script>
+
 </body>
 </html>
