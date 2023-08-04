@@ -18,7 +18,10 @@
 <body>
 
   <!-- Advice # Advice ID goes here -->
-  <div id="container">Advice</div>
+  <div id="container">
+    <p>ADVICE #1</p>
+    <h3>Loading....</h3>
+    <button type="reset">()</button>
 
   <!-- Advice text goes here -->
   
@@ -27,21 +30,19 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 
-  <p id="text">Hello</p>
-  <h1>Authors</h1>
-  <ul id="authors"></ul>  
 
   <script>
+    async function generate() {
+      const res = await fetch("https://api.adviceslip.com/advice");
+      const data = await res.json();
+      document.querySelector("p").innerText = "ADVICE #" + data.slip.id;
+      document.querySelector("h3").innerText = '"' + data.slip.advice  + '"';
+    }
 
-    let advice = document.getElementById('text');
-
-    async function api(url) {
-      let apiRequest = await fetch();
-      let result = await apiRequest;
-      advice.innerText = result;
-    } 
-
-    api('https://api.adviceslip.com/advice');
+    generate();
+    document.querySelector('button').onclick = () => { 
+      generate();
+    }
 
   </script>
 
