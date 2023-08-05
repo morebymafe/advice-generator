@@ -15,7 +15,7 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(0, 0%, 0%); }
     @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Macondo&family=Righteous&display=swap');  </style>
 </head>
 <body>
@@ -26,7 +26,7 @@
     <h6 class="colon">[|]</h6>
     <h3>Loading....</h3>
     <img src="images/pattern-divider-mobile.svg" alt="divider"><br>
-    <img src="images/icon-dice.svg" alt="icon-btn">
+    <img id="dice" src="images/icon-dice.svg" alt="icon-btn">
 
   </div>
 
@@ -46,12 +46,12 @@
     async function generate() {
     const res = await fetch("https://api.adviceslip.com/advice");
     const data = await res.json();
-    document.querySelector("p").innerText = ":<   A D V I C E #" + data.slip.id + " >:";
+    document.querySelector("p").innerText = "<|> ADVICE #" + data.slip.id + " <|>";
     document.querySelector("h3").innerText = '"' + data.slip.advice + '"';
   }
 
   generate();
-  document.querySelector('img').onclick = () => { 
+  document.getElementById('dice').onclick = () => { 
     generate();
   }
 </script>
