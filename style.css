@@ -43,7 +43,8 @@ h3{
 #dice{
     background-color: aqua;
     box-shadow: 1px 1px 5px rgb(198, 235, 235);
-    padding: 2px;
+    padding: 5px;
+    border-radius: 20px;
     margin-top: 15px;
     cursor: pointer;
 }
