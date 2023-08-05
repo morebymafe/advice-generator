@@ -41,13 +41,24 @@ h3{
     margin: 0;
 }
 
-#dice{
+@keyframes glow {
+    0%  {box-shadow: 1px 1px 15px rgb(198, 235, 235);}
+    25% {box-shadow: 1px 1px 10px rgb(198, 235, 235);}
+    50% {box-shadow: 1px 1px 5px rgb(198, 235, 235);}
+    75% {box-shadow: 1px 1px 10px rgb(198, 235, 235);}
+    100% {box-shadow: 1px 1px 15px rgb(198, 235, 235);}
+
+    
+}
+.dice{
     background-color: aqua;
-    box-shadow: 1px 1px 5px rgb(198, 235, 235);
     padding: 5px;
     border-radius: 20px;
     margin-top: 15px;
     cursor: pointer;
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes dance {
