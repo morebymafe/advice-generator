@@ -2,8 +2,34 @@ body{
     margin: auto;
     padding: 20px;
     text-align: center;
+    background-color: rgb(26, 5, 85);
 }
 
 .container{
-    
+    position: absolute;
+    top: 20%;
+    background-color: rgba(32, 0, 24, 0.685);
+    padding: 1.5em 10px;
+    width: 300px;
+    border-radius: 8px;
+}
+p{
+    font-family: 'Bangers', cursive;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h3{
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    color: rgb(198, 235, 235);
+    word-spacing: 10px;
+}
+
+.colon{
+    color: rgb(167, 0, 56);
+    font-family: 'Noto Serif Vithkuqi', serif;
+    font-size: 50px;
+    margin: 0;
 }

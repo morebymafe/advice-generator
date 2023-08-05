@@ -8,21 +8,34 @@
   
   <title>Frontend Mentor | Advice generator app</title>
   <link rel="stylesheet" href="style.css" rel="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@600&family=Righteous&display=swap" rel="stylesheet">  
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Holtwood+One+SC&family=Macondo&family=Righteous&display=swap');  </style>
 </head>
 <body>
 
   <!-- Advice # Advice ID goes here -->
   <div class="container">
     <p>ADVICE #1</p>
+    <h6 class="colon">[|]</h6>
     <h3>Loading....</h3>
+    <img src="images/pattern-divider-mobile.svg" alt="divider"><br>
     <img src="images/icon-dice.svg" alt="icon-btn">
 
+  </div>
+
   <!-- Advice text goes here -->
+
+  <div>
+    <audio autoplay loop>
+    <source src="media/emotional-piano-153812.mp3" type="audio/mpeg">
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -33,8 +46,8 @@
     async function generate() {
     const res = await fetch("https://api.adviceslip.com/advice");
     const data = await res.json();
-    document.querySelector("p").innerText = "ADVICE #" + data.slip.id;
-    document.querySelector("h3").innerText = '"' + data.slip.advice  + '"';
+    document.querySelector("p").innerText = ":<   A D V I C E #" + data.slip.id + " >:";
+    document.querySelector("h3").innerText = '"' + data.slip.advice + '"';
   }
 
   generate();
