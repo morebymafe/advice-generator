@@ -3,6 +3,7 @@ body{
     padding: 20px;
     text-align: center;
     background-color: rgb(0, 78, 92);
+    overflow-x: hidden;
 }
 
 .container{
@@ -53,4 +54,18 @@ h3{
     0%     {top: 10%}
     50%    {top: 15%}
     100%   {top: 10%}
+}
+
+@media screen and (min-width: 400px){
+    .container{
+        margin: 0 35%;
+    }
+    .attribution{
+        position: absolute; 
+        bottom: 10px;
+        margin: 0 25%;
+    }
+
+
+    
 }
