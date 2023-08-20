@@ -10,7 +10,7 @@ body{
     position: absolute;
     top: 10%;
     background-color: rgba(32, 0, 24, 0.685);
-    padding: 1.5em 10px;
+    padding: 1.5em 18px;
     width: 300px;
     border-radius: 8px;
     animation-name: dance;
